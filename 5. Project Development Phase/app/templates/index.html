@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduGenie — AI Powered Learning Assistant</title>
+    <link rel="stylesheet" href="/static/css/animations.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">EduGenie</a>
+        <nav class="site-nav" id="site-nav">
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy fade-up">
+            <p class="eyebrow">AI Powered Learning</p>
+            <h1>EduGenie helps learners discover concepts faster and stay inspired.</h1>
+            <p class="hero-text">
+              Build interactive learning experiences with a polished web front-end and robust FastAPI foundation.
+            </p>
+            <div class="hero-actions">
+              <a href="#features" class="button button-primary">Explore Features</a>
+              <a href="#contact" class="button button-secondary">Get Started</a>
+            </div>
+          </div>
+          <div class="hero-media fade-right">
+            <div class="hero-card">
+              <span class="hero-chip">Launching soon</span>
+              <h2>Modern curriculum workflows</h2>
+              <p>Design lessons, quizzes, and guided learning paths with confidence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container">
+          <div class="section-header fade-up">
+            <p class="eyebrow">Platform foundation</p>
+            <h2>Core features included in the foundation</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card fade-up delay-1">
+              <h3>FastAPI backend</h3>
+              <p>Solid API core with request validation, error handling, and CORS configuration.</p>
+            </article>
+            <article class="feature-card fade-up delay-2">
+              <h3>Jinja2 templates</h3>
+              <p>Beautiful server-rendered landing page with static asset delivery and responsive design.</p>
+            </article>
+            <article class="feature-card fade-up delay-3">
+              <h3>Environment first</h3>
+              <p>Configuration via Pydantic settings and dotenv, ready for secure deployment.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container about-grid fade-up">
+          <div>
+            <h2>Designed for educators and builders.</h2>
+            <p>
+              EduGenie is a production-ready foundation for AI-assisted education platforms. It preserves clean architecture and keeps AI integration separate from the core web platform.
+            </p>
+          </div>
+          <div class="about-details">
+            <div>
+              <strong>Backend</strong>
+              <p>FastAPI, Pydantic, and flexible routing designed to scale with your learning application.</p>
+            </div>
+            <div>
+              <strong>Frontend</strong>
+              <p>Responsive HTML, CSS, and vanilla JavaScript deliver a fast and accessible landing experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid fade-up">
+        <div>
+          <p>EduGenie</p>
+          <p>Helping learning platforms launch with confidence.</p>
+        </div>
+        <div>
+          <p>Ready for production-grade architecture and next-stage AI features.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">EduGenie</div>
+        <nav class="sidebar-nav">
+          <button data-view="dashboard" class="nav-item active">Dashboard</button>
+          <button data-view="qa" class="nav-item">Question Answering</button>
+          <button data-view="explain" class="nav-item">Concept Explanation</button>
+          <button data-view="quiz" class="nav-item">Quiz Generator</button>
+          <button data-view="summarize" class="nav-item">Summarizer</button>
+          <button data-view="roadmap" class="nav-item">Learning Roadmap</button>
+        </nav>
+        <div class="sidebar-footer">
+          <button id="theme-toggle" class="button button-secondary">Toggle Dark</button>
+        </div>
+      </aside>
+
+      <main class="dashboard" id="dashboard-root">
+        <div class="dash-header container">
+          <h2>Welcome to EduGenie</h2>
+          <div class="dash-actions">
+            <button id="copy-btn" class="button">Copy</button>
+            <button id="download-btn" class="button">Download</button>
+          </div>
+        </div>
+
+        <section class="container cards-grid">
+          <article class="card feature">
+            <h3>Question Answering</h3>
+            <p>Ask a question and get a concise answer with explanations.</p>
+            <a class="button button-primary" data-view="qa">Open</a>
+          </article>
+          <article class="card feature">
+            <h3>Concept Explanation</h3>
+            <p>Get step-by-step explanations tailored to your level.</p>
+            <a class="button button-primary" data-view="explain">Open</a>
+          </article>
+          <article class="card feature">
+            <h3>Quiz Generator</h3>
+            <p>Generate multiple-choice quizzes from any topic.</p>
+            <a class="button button-primary" data-view="quiz">Open</a>
+          </article>
+          <article class="card feature">
+            <h3>Summarizer</h3>
+            <p>Condense long text into bite-sized summaries.</p>
+            <a class="button button-primary" data-view="summarize">Open</a>
+          </article>
+          <article class="card feature">
+            <h3>Learning Roadmap</h3>
+            <p>Create a multi-week learning plan with milestones.</p>
+            <a class="button button-primary" data-view="roadmap">Open</a>
+          </article>
+        </section>
+
+        <section class="container playground" id="playground">
+          <!-- Dynamic forms and results will be injected here -->
+        </section>
+      </main>
+    </div>
+
+<script type="module" src="/static/js/app.js"></script>
+  </body>
+</html>
